@@ -1,1 +1,1 @@
-# fryssg.github.iogithub.io
+# fryssg.github.io
