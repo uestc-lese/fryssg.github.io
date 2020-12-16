@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="第一个博客, 大白爱好者">
+    <meta name="keywords" content="CNN学习经历, 大白爱好者">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>第一个博客 | 大白爱好者</title>
+    <title>CNN学习经历 | 大白爱好者</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -289,12 +289,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">第一个博客</h1>
+                    <h1 class="description center-align post-title">CNN学习经历</h1>
                 </div>
             </div>
         </div>
@@ -410,8 +410,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/">
-                                <span class="chip bg-color">第一个博客</span>
+                            <a href="/tags/6%E6%9C%88%E4%B8%8B%E5%8D%8A%E6%9C%88/">
+                                <span class="chip bg-color">6月下半月</span>
                             </a>
                         
                     </div>
@@ -426,7 +426,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-14
+                    2020-12-16
                 </div>
                 
 
@@ -447,7 +447,21 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="第一个博客"><a href="#第一个博客" class="headerlink" title="第一个博客"></a>第一个博客</h1><p>今天花了一天的时间终于解决了win上面许多奇怪的问题搭好了框架，总的来说非常高兴，第二天完成了友链之类的配置总的来说也很不错，之后再抽空完善其他部分。</p>
+                <h1 id="6月下半月"><a href="#6月下半月" class="headerlink" title="6月下半月"></a>6月下半月</h1><p>期末主要事务已完成，时间逐渐空出，这半个月主要对·CNN的一些数理基础进行了推理和复习，虽然依旧有很多不能理解，但之后会继续学习。</p>
+<p>时间花费：6个时间段对数学内容学习，4个时间段对代码内容学习。</p>
+<h2 id="一-数理内容"><a href="#一-数理内容" class="headerlink" title="一. 数理内容"></a>一. 数理内容</h2><h2 id="对多层感知机和线性回归和逻辑回归，卷积层和下采样层，SoftMax回归"><a href="#对多层感知机和线性回归和逻辑回归，卷积层和下采样层，SoftMax回归" class="headerlink" title="对多层感知机和线性回归和逻辑回归，卷积层和下采样层，SoftMax回归"></a>对多层感知机和线性回归和逻辑回归，<em>卷积层和下采样层，</em>SoftMax回归</h2><h3 id="多层感知机"><a href="#多层感知机" class="headerlink" title="多层感知机"></a>多层感知机</h3><p>原始数据是非线性可分的，但是可以通过某种方法将其映射到一个线性可分的高维空间中，从而使用线性分类器完成分类</p>
+<h3 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h3><p>逻辑回归的世界中，结果变量与自变量的对数概率（log-odds）具有线性关系，输出数据点在一个或另一个类别中的概率，而不是常规数值</p>
+<h3 id="SoftMax回归"><a href="#SoftMax回归" class="headerlink" title="SoftMax回归"></a>SoftMax回归</h3><p>使用广义线性模型来拟合这个多项分布，由广义线性模型推导出的目标函数hθ(x)，hθ(x)即为SoftMax回归的分类模型</p>
+<h3 id="卷积层和下采样层"><a href="#卷积层和下采样层" class="headerlink" title="卷积层和下采样层"></a>卷积层和下采样层</h3><p><strong>局部感受野，</strong>每个隐层节点只连接到图像某个足够小局部的像素点上，从而大大减少需要训练的权值参数，<strong>权值共享，</strong>结构、功能是相同的，甚至是可以互相替代的。也就是，在卷积神经网中，同一个卷积核内，所有的神经元的权值是相同的，从而大大减少需要训练的参数，<strong>池化，</strong>也就是每次将原图像卷积后，都通过一个下采样的过程，来减小图像的规模</p>
+<h2 id="二-代码内容"><a href="#二-代码内容" class="headerlink" title="二. 代码内容"></a>二. 代码内容</h2><p>这里对代码的实现参考了github和csdn的一些博文和库。</p>
+<h3 id="多层感知机（MLP）"><a href="#多层感知机（MLP）" class="headerlink" title="多层感知机（MLP）"></a>多层感知机（MLP）</h3><p>主要是numpy、theano，以及python自带的os、sys、time模块，代码细节不过多赘述，这里值得注意的是，对SoftMax是MLP的基本构件之一，网络整体取决于这几个东西的架构，主要分为定义MLP模型和将MLP应用于MNIST</p>
+<h3 id="逻辑回归-1"><a href="#逻辑回归-1" class="headerlink" title="逻辑回归"></a>逻辑回归</h3><p>先定义sigmoid函数，声音随机梯度上升算法或随机梯度下降算法，初始化权重，然后进行迭代优化，计算损失，更新权重值，然后随机删除选中下标，再次迭代</p>
+<h3 id="SoftMax回归-1"><a href="#SoftMax回归-1" class="headerlink" title="SoftMax回归"></a>SoftMax回归</h3><p>处理损失函数和导数，简化冗余参数，计算每个样本的类概率，计算损失函数，构造示性函数，计算导数</p>
+<h3 id="卷积层和下采样层-1"><a href="#卷积层和下采样层-1" class="headerlink" title="卷积层和下采样层"></a>卷积层和下采样层</h3><p>具体依托与整个算法，在MLP中有过解释</p>
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>1．      基本理解一些数理内容的数学知识，但是对涉及概率统计的知识有所模糊，可能是还未学习的缘故。</p>
+<p>2．      基本对代码内容有所了解，有利于以后调参</p>
+<p>3．      时间耗费较多，主要是对涉及的数学知识应用能力不足</p>
+<p>ps：这里是整理之前所学内容可能格式有一些问题，因为是报告书，所以比较简略</p>
 
                 
             </div>
@@ -474,7 +488,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/12/14/di-yi-ge-bo-ke/">http://example.com/2020/12/14/di-yi-ge-bo-ke/</a>
+                    <a href="http://example.com/2020/12/16/6-yue-xia-ban-yue/">http://example.com/2020/12/16/6-yue-xia-ban-yue/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -512,8 +526,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/">
-                                    <span class="chip bg-color">第一个博客</span>
+                                <a href="/tags/6%E6%9C%88%E4%B8%8B%E5%8D%8A%E6%9C%88/">
+                                    <span class="chip bg-color">6月下半月</span>
                                 </a>
                             
                         </div>
@@ -558,7 +572,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2020-12-14T16-08-51',
+        id: '2020-12-16T16-08-51',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -630,9 +644,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/12/16/6-yue-xia-ban-yue/">
                     <div class="card-image">
@@ -650,9 +665,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -661,6 +676,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -679,13 +695,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/14/hello-world/">
+                <a href="/2020/12/14/di-yi-ge-bo-ke/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="第一个博客">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">第一个博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -705,6 +721,14 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/">
+                        <span class="chip bg-color">第一个博客</span>
+                    </a>
+                    
                 </div>
                 
             </div>

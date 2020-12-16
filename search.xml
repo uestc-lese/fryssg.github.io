@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>CNN学习经历</title>
+      <link href="2020/12/16/6-yue-xia-ban-yue/"/>
+      <url>2020/12/16/6-yue-xia-ban-yue/</url>
+      
+        <content type="html"><![CDATA[<h1 id="6月下半月"><a href="#6月下半月" class="headerlink" title="6月下半月"></a>6月下半月</h1><p>期末主要事务已完成，时间逐渐空出，这半个月主要对·CNN的一些数理基础进行了推理和复习，虽然依旧有很多不能理解，但之后会继续学习。</p><p>时间花费：6个时间段对数学内容学习，4个时间段对代码内容学习。</p><h2 id="一-数理内容"><a href="#一-数理内容" class="headerlink" title="一. 数理内容"></a>一. 数理内容</h2><h2 id="对多层感知机和线性回归和逻辑回归，卷积层和下采样层，SoftMax回归"><a href="#对多层感知机和线性回归和逻辑回归，卷积层和下采样层，SoftMax回归" class="headerlink" title="对多层感知机和线性回归和逻辑回归，卷积层和下采样层，SoftMax回归"></a>对多层感知机和线性回归和逻辑回归，<em>卷积层和下采样层，</em>SoftMax回归</h2><h3 id="多层感知机"><a href="#多层感知机" class="headerlink" title="多层感知机"></a>多层感知机</h3><p>原始数据是非线性可分的，但是可以通过某种方法将其映射到一个线性可分的高维空间中，从而使用线性分类器完成分类</p><h3 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h3><p>逻辑回归的世界中，结果变量与自变量的对数概率（log-odds）具有线性关系，输出数据点在一个或另一个类别中的概率，而不是常规数值</p><h3 id="SoftMax回归"><a href="#SoftMax回归" class="headerlink" title="SoftMax回归"></a>SoftMax回归</h3><p>使用广义线性模型来拟合这个多项分布，由广义线性模型推导出的目标函数hθ(x)，hθ(x)即为SoftMax回归的分类模型</p><h3 id="卷积层和下采样层"><a href="#卷积层和下采样层" class="headerlink" title="卷积层和下采样层"></a>卷积层和下采样层</h3><p><strong>局部感受野，</strong>每个隐层节点只连接到图像某个足够小局部的像素点上，从而大大减少需要训练的权值参数，<strong>权值共享，</strong>结构、功能是相同的，甚至是可以互相替代的。也就是，在卷积神经网中，同一个卷积核内，所有的神经元的权值是相同的，从而大大减少需要训练的参数，<strong>池化，</strong>也就是每次将原图像卷积后，都通过一个下采样的过程，来减小图像的规模</p><h2 id="二-代码内容"><a href="#二-代码内容" class="headerlink" title="二. 代码内容"></a>二. 代码内容</h2><p>这里对代码的实现参考了github和csdn的一些博文和库。</p><h3 id="多层感知机（MLP）"><a href="#多层感知机（MLP）" class="headerlink" title="多层感知机（MLP）"></a>多层感知机（MLP）</h3><p>主要是numpy、theano，以及python自带的os、sys、time模块，代码细节不过多赘述，这里值得注意的是，对SoftMax是MLP的基本构件之一，网络整体取决于这几个东西的架构，主要分为定义MLP模型和将MLP应用于MNIST</p><h3 id="逻辑回归-1"><a href="#逻辑回归-1" class="headerlink" title="逻辑回归"></a>逻辑回归</h3><p>先定义sigmoid函数，声音随机梯度上升算法或随机梯度下降算法，初始化权重，然后进行迭代优化，计算损失，更新权重值，然后随机删除选中下标，再次迭代</p><h3 id="SoftMax回归-1"><a href="#SoftMax回归-1" class="headerlink" title="SoftMax回归"></a>SoftMax回归</h3><p>处理损失函数和导数，简化冗余参数，计算每个样本的类概率，计算损失函数，构造示性函数，计算导数</p><h3 id="卷积层和下采样层-1"><a href="#卷积层和下采样层-1" class="headerlink" title="卷积层和下采样层"></a>卷积层和下采样层</h3><p>具体依托与整个算法，在MLP中有过解释</p><h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>1．      基本理解一些数理内容的数学知识，但是对涉及概率统计的知识有所模糊，可能是还未学习的缘故。</p><p>2．      基本对代码内容有所了解，有利于以后调参</p><p>3．      时间耗费较多，主要是对涉及的数学知识应用能力不足</p><p>ps：这里是整理之前所学内容可能格式有一些问题，因为是报告书，所以比较简略</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 6月下半月 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>第一个博客</title>
       <link href="2020/12/14/di-yi-ge-bo-ke/"/>
       <url>2020/12/14/di-yi-ge-bo-ke/</url>
