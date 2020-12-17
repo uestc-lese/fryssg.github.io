@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="6月下半月, 大白爱好者">
+    <meta name="keywords" content="5月, 大白爱好者">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>6月下半月 | 大白爱好者</title>
+    <title>5月 | 大白爱好者</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -289,12 +289,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">6月下半月</h1>
+                    <h1 class="description center-align post-title">5月</h1>
                 </div>
             </div>
         </div>
@@ -426,7 +426,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-16
+                    2020-12-17
                 </div>
                 
 
@@ -447,21 +447,57 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="6月下半月"><a href="#6月下半月" class="headerlink" title="6月下半月"></a>6月下半月</h1><p>期末主要事务已完成，时间逐渐空出，这半个月主要对·CNN的一些数理基础进行了推理和复习，虽然依旧有很多不能理解，但之后会继续学习。</p>
-<p>时间花费：6个时间段对数学内容学习，4个时间段对代码内容学习。</p>
-<h2 id="一-数理内容"><a href="#一-数理内容" class="headerlink" title="一. 数理内容"></a>一. 数理内容</h2><h2 id="对多层感知机和线性回归和逻辑回归，卷积层和下采样层，SoftMax回归"><a href="#对多层感知机和线性回归和逻辑回归，卷积层和下采样层，SoftMax回归" class="headerlink" title="对多层感知机和线性回归和逻辑回归，卷积层和下采样层，SoftMax回归"></a>对多层感知机和线性回归和逻辑回归，<em>卷积层和下采样层，</em>SoftMax回归</h2><h3 id="多层感知机"><a href="#多层感知机" class="headerlink" title="多层感知机"></a>多层感知机</h3><p>原始数据是非线性可分的，但是可以通过某种方法将其映射到一个线性可分的高维空间中，从而使用线性分类器完成分类</p>
-<h3 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h3><p>逻辑回归的世界中，结果变量与自变量的对数概率（log-odds）具有线性关系，输出数据点在一个或另一个类别中的概率，而不是常规数值</p>
-<h3 id="SoftMax回归"><a href="#SoftMax回归" class="headerlink" title="SoftMax回归"></a>SoftMax回归</h3><p>使用广义线性模型来拟合这个多项分布，由广义线性模型推导出的目标函数hθ(x)，hθ(x)即为SoftMax回归的分类模型</p>
-<h3 id="卷积层和下采样层"><a href="#卷积层和下采样层" class="headerlink" title="卷积层和下采样层"></a>卷积层和下采样层</h3><p><strong>局部感受野，</strong>每个隐层节点只连接到图像某个足够小局部的像素点上，从而大大减少需要训练的权值参数，<strong>权值共享，</strong>结构、功能是相同的，甚至是可以互相替代的。也就是，在卷积神经网中，同一个卷积核内，所有的神经元的权值是相同的，从而大大减少需要训练的参数，<strong>池化，</strong>也就是每次将原图像卷积后，都通过一个下采样的过程，来减小图像的规模</p>
-<h2 id="二-代码内容"><a href="#二-代码内容" class="headerlink" title="二. 代码内容"></a>二. 代码内容</h2><p>这里对代码的实现参考了github和csdn的一些博文和库。</p>
-<h3 id="多层感知机（MLP）"><a href="#多层感知机（MLP）" class="headerlink" title="多层感知机（MLP）"></a>多层感知机（MLP）</h3><p>主要是numpy、theano，以及python自带的os、sys、time模块，代码细节不过多赘述，这里值得注意的是，对SoftMax是MLP的基本构件之一，网络整体取决于这几个东西的架构，主要分为定义MLP模型和将MLP应用于MNIST</p>
-<h3 id="逻辑回归-1"><a href="#逻辑回归-1" class="headerlink" title="逻辑回归"></a>逻辑回归</h3><p>先定义sigmoid函数，声音随机梯度上升算法或随机梯度下降算法，初始化权重，然后进行迭代优化，计算损失，更新权重值，然后随机删除选中下标，再次迭代</p>
-<h3 id="SoftMax回归-1"><a href="#SoftMax回归-1" class="headerlink" title="SoftMax回归"></a>SoftMax回归</h3><p>处理损失函数和导数，简化冗余参数，计算每个样本的类概率，计算损失函数，构造示性函数，计算导数</p>
-<h3 id="卷积层和下采样层-1"><a href="#卷积层和下采样层-1" class="headerlink" title="卷积层和下采样层"></a>卷积层和下采样层</h3><p>具体依托与整个算法，在MLP中有过解释</p>
-<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>1．      基本理解一些数理内容的数学知识，但是对涉及概率统计的知识有所模糊，可能是还未学习的缘故。</p>
-<p>2．      基本对代码内容有所了解，有利于以后调参</p>
-<p>3．      时间耗费较多，主要是对涉及的数学知识应用能力不足</p>
-<p>ps：这里是整理之前所学内容可能格式有一些问题，因为是报告书，所以比较简略</p>
+                <h1 id="五月"><a href="#五月" class="headerlink" title="五月"></a>五月</h1><h2 id="二．文献阅读"><a href="#二．文献阅读" class="headerlink" title="二．文献阅读"></a>二．文献阅读</h2><h3 id="AlexNet"><a href="#AlexNet" class="headerlink" title="AlexNet"></a>AlexNet</h3><h3 id="Abstract和introuction"><a href="#Abstract和introuction" class="headerlink" title="Abstract和introuction"></a>Abstract和introuction</h3><p>初步了解了在当时领域卷积神经网络的发展状况和发展情况</p>
+<h3 id="The-Architecture"><a href="#The-Architecture" class="headerlink" title="The Architecture"></a>The Architecture</h3><p>貌似224×244好像不对，选用ReLU激活函数的原因，当初选用2个GPU（现在几乎不用）对总体结构的影响，LRN层的用法，对全连接层的对应关系了解，比较特殊的局部响应归一化操作  </p>
+<h3 id="Reducing-Overfitting"><a href="#Reducing-Overfitting" class="headerlink" title="Reducing Overfitting"></a>Reducing Overfitting</h3><p>通过数据增强（这里是水平翻转和随机裁剪和颜色光宅照变换），Dropout方法随机停止一些神经元的运作，促使不同的神经元和不同的神经元合作，较少依赖</p>
+<h3 id="Details-of-learning"><a href="#Details-of-learning" class="headerlink" title="Details of learning"></a>Details of learning</h3><p>损失函数，权重衰减，类似于动量，主要是避免权重过大形成过拟合</p>
+<h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><p>相比前人成果有了巨大飞跃，用CNN取得了很大的成就，同时图像的分析可能是标签问题，实际上效果很好  </p>
+<h3 id="Discussion和Epilogue"><a href="#Discussion和Epilogue" class="headerlink" title="Discussion和Epilogue"></a>Discussion和Epilogue</h3><p>表明CNN有巨大潜力，以及每个卷积层的重要性。</p>
+<h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><ol>
+<li><p>基本初步了解了CNN</p>
+</li>
+<li><p>对其中的经典模型AlexNet进行了了解</p>
+</li>
+<li><p>对目前CNN的发展趋势有了初步理解</p>
+</li>
+</ol>
+<h2 id="二．-VGG-16"><a href="#二．-VGG-16" class="headerlink" title="二． VGG-16"></a>二． VGG-16</h2><p>作者：Karen Simonyan &amp; Andrew Zisserman</p>
+<p>这里主要对VGG16的论文进行了学习，因为VGG19虽然多了3层但是总体提升不大</p>
+<h3 id="Abstract和introduction详细阅读"><a href="#Abstract和introduction详细阅读" class="headerlink" title="Abstract和introduction详细阅读"></a>Abstract和introduction详细阅读</h3><ol>
+<li><p>了解了基本目的和前人贡献</p>
+</li>
+<li><p>主要目的是对3×3的滤波器进行了研究</p>
+<p>3.总体结构相对简单，具有规律性</p>
+</li>
+</ol>
+<h3 id="experiment-procedure"><a href="#experiment-procedure" class="headerlink" title="experiment procedure"></a>experiment procedure</h3><ol>
+<li><p>该模型的实验过程并无太大有效创新方式，主要是对其实验思路进行初步了解。</p>
+<p>2.每次池化后刚好缩小一半，通道数量不断增加，图像缩小比例与通道增加比例有关系，</p>
+</li>
+</ol>
+<h3 id="result-and-discussion"><a href="#result-and-discussion" class="headerlink" title="result and discussion"></a>result and discussion</h3><ol>
+<li>用多个3×3卷积核代替较大的卷积核，也顺便的简化  </li>
+<li>这种方法比用较大的卷积核具有更大的非线性，明显减少了网络参数  </li>
+</ol>
+<h3 id="conclusion"><a href="#conclusion" class="headerlink" title="conclusion"></a>conclusion</h3><p>总体来看与abstract没什么区别，但是从后人角度来看3×3卷积核可以代替附近许多数字大小的卷积核</p>
+<h2 id="ZFNet"><a href="#ZFNet" class="headerlink" title="ZFNet"></a>ZFNet</h2><p>本周主要对经典网络中的ZFNet进行了学习，主要是与可解释性问题相关，将深层的图片转化为肉眼可以识别的图片</p>
+<p>论文名Visualizing and Understanding Convolutional Networks</p>
+<p>油管上有作者的讲解视频，作为参考</p>
+<h3 id="Abstract和introduction"><a href="#Abstract和introduction" class="headerlink" title="Abstract和introduction"></a>Abstract和introduction</h3><p>提出了当时对cnn的工作方式不太了解，不清楚为什么效果好或效果差，所谓“黑箱原理，他们提出了一种方法来解决这种问题”</p>
+<h3 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h3><p>CNN以前可解释性比较差，对高层卷积很难看懂，这里提出了梯度上升（反池化）等方式将高层也转换成人眼可以看的懂的图片  </p>
+<h3 id="Approach"><a href="#Approach" class="headerlink" title="Approach"></a>Approach</h3><p> 即为从前往后构造的过程，本质上与之前学习的AlexNet之类的区别不大，这里不做赘述，使用了switch记录最大值的位置，使能够完成反池化过程，转置卷积，</p>
+<h3 id="Training-Details"><a href="#Training-Details" class="headerlink" title="Training Details"></a>Training Details</h3><p>图像预处理，使用水平翻转等方式，相当于增强数据，对卷积核大小进行了限制和裁剪</p>
+<h3 id="Convnet-Visualization"><a href="#Convnet-Visualization" class="headerlink" title="Convnet Visualization"></a>Convnet Visualization</h3><p>不同层的数据演化效果不同，2层边缘颜色等低级特征，3层有纹理质地等，4层更加特化如狗脸，以此类推，变换对图的底层影响大，通过遮挡部分图进行图像局部相关性分析，  </p>
+<h3 id="Experiments"><a href="#Experiments" class="headerlink" title="Experiments"></a>Experiments</h3><p>对AlexNet模型进行了实验，证明了去掉全连接层或中间两个卷积层对效果影响不大，但两个一起去掉影响大，这里差不多证明了全连接层用处不大，表明通过迁移学习可以用较小的数据量达到较好的效果，做到了对不同层提取的特征的有效性分析，特征分层，越深层效果越好</p>
+<h3 id="Discussion"><a href="#Discussion" class="headerlink" title="Discussion"></a>Discussion</h3><p>  可以相对比较直观的解释分类的特征，也表明了可以用这种方法来改进模型  </p>
+<h2 id="最终效果-1"><a href="#最终效果-1" class="headerlink" title="最终效果"></a>最终效果</h2><ol>
+<li><p>基本初步了解了VGG</p>
+</li>
+<li><p>对其中的经典模型ZFNet进行了了解</p>
+</li>
+<li><p>对目前CNN的可解释性问题有了初步理解</p>
+</li>
+</ol>
 
                 
             </div>
@@ -488,7 +524,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/12/16/6-yue-xia-ban-yue/">http://example.com/2020/12/16/6-yue-xia-ban-yue/</a>
+                    <a href="http://example.com/2020/12/17/5-yue/">http://example.com/2020/12/17/5-yue/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -617,9 +653,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/12/17/5-yue/">
                     <div class="card-image">
@@ -637,9 +674,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -648,6 +685,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -666,13 +704,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/14/di-yi-ge-bo-ke/">
+                <a href="/2020/12/16/6-yue-xia-ban-yue/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="第一个博客">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="6月下半月">
                         
-                        <span class="card-title">第一个博客</span>
+                        <span class="card-title">6月下半月</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -683,7 +721,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-16
                             </span>
                         <span class="publish-author">
                             
@@ -696,8 +734,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/">
-                        <span class="chip bg-color">第一个博客</span>
+                    <a href="/tags/CNN%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%8E%86/">
+                        <span class="chip bg-color">CNN学习经历</span>
                     </a>
                     
                 </div>

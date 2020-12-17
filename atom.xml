@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-12-16T14:20:11.617Z</updated>
+  <updated>2020-12-17T13:52:53.743Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>CNN学习经历</title>
+    <title>5月</title>
+    <link href="http://example.com/2020/12/17/5-yue/"/>
+    <id>http://example.com/2020/12/17/5-yue/</id>
+    <published>2020-12-17T13:52:51.000Z</published>
+    <updated>2020-12-17T13:52:53.743Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;五月&quot;&gt;&lt;a href=&quot;#五月&quot; class=&quot;headerlink&quot; title=&quot;五月&quot;&gt;&lt;/a&gt;五月&lt;/h1&gt;&lt;h2 id=&quot;二．文献阅读&quot;&gt;&lt;a href=&quot;#二．文献阅读&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="CNN学习经历" scheme="http://example.com/tags/CNN%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%8E%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>6月下半月</title>
     <link href="http://example.com/2020/12/16/6-yue-xia-ban-yue/"/>
     <id>http://example.com/2020/12/16/6-yue-xia-ban-yue/</id>
     <published>2020-12-16T08:08:51.000Z</published>
-    <updated>2020-12-16T14:20:11.617Z</updated>
+    <updated>2020-12-17T13:52:13.699Z</updated>
     
     
       
@@ -35,7 +58,7 @@
     
     
     
-    <category term="6月下半月" scheme="http://example.com/tags/6%E6%9C%88%E4%B8%8B%E5%8D%8A%E6%9C%88/"/>
+    <category term="CNN学习经历" scheme="http://example.com/tags/CNN%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%8E%86/"/>
     
   </entry>
   

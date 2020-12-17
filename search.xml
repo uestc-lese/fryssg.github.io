@@ -4,7 +4,26 @@
   
     
     <entry>
-      <title>CNN学习经历</title>
+      <title>5月</title>
+      <link href="2020/12/17/5-yue/"/>
+      <url>2020/12/17/5-yue/</url>
+      
+        <content type="html"><![CDATA[<h1 id="五月"><a href="#五月" class="headerlink" title="五月"></a>五月</h1><h2 id="二．文献阅读"><a href="#二．文献阅读" class="headerlink" title="二．文献阅读"></a>二．文献阅读</h2><h3 id="AlexNet"><a href="#AlexNet" class="headerlink" title="AlexNet"></a>AlexNet</h3><h3 id="Abstract和introuction"><a href="#Abstract和introuction" class="headerlink" title="Abstract和introuction"></a>Abstract和introuction</h3><p>初步了解了在当时领域卷积神经网络的发展状况和发展情况</p><h3 id="The-Architecture"><a href="#The-Architecture" class="headerlink" title="The Architecture"></a>The Architecture</h3><p>貌似224×244好像不对，选用ReLU激活函数的原因，当初选用2个GPU（现在几乎不用）对总体结构的影响，LRN层的用法，对全连接层的对应关系了解，比较特殊的局部响应归一化操作  </p><h3 id="Reducing-Overfitting"><a href="#Reducing-Overfitting" class="headerlink" title="Reducing Overfitting"></a>Reducing Overfitting</h3><p>通过数据增强（这里是水平翻转和随机裁剪和颜色光宅照变换），Dropout方法随机停止一些神经元的运作，促使不同的神经元和不同的神经元合作，较少依赖</p><h3 id="Details-of-learning"><a href="#Details-of-learning" class="headerlink" title="Details of learning"></a>Details of learning</h3><p>损失函数，权重衰减，类似于动量，主要是避免权重过大形成过拟合</p><h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><p>相比前人成果有了巨大飞跃，用CNN取得了很大的成就，同时图像的分析可能是标签问题，实际上效果很好  </p><h3 id="Discussion和Epilogue"><a href="#Discussion和Epilogue" class="headerlink" title="Discussion和Epilogue"></a>Discussion和Epilogue</h3><p>表明CNN有巨大潜力，以及每个卷积层的重要性。</p><h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><ol><li><p>基本初步了解了CNN</p></li><li><p>对其中的经典模型AlexNet进行了了解</p></li><li><p>对目前CNN的发展趋势有了初步理解</p></li></ol><h2 id="二．-VGG-16"><a href="#二．-VGG-16" class="headerlink" title="二． VGG-16"></a>二． VGG-16</h2><p>作者：Karen Simonyan &amp; Andrew Zisserman</p><p>这里主要对VGG16的论文进行了学习，因为VGG19虽然多了3层但是总体提升不大</p><h3 id="Abstract和introduction详细阅读"><a href="#Abstract和introduction详细阅读" class="headerlink" title="Abstract和introduction详细阅读"></a>Abstract和introduction详细阅读</h3><ol><li><p>了解了基本目的和前人贡献</p></li><li><p>主要目的是对3×3的滤波器进行了研究</p><p>3.总体结构相对简单，具有规律性</p></li></ol><h3 id="experiment-procedure"><a href="#experiment-procedure" class="headerlink" title="experiment procedure"></a>experiment procedure</h3><ol><li><p>该模型的实验过程并无太大有效创新方式，主要是对其实验思路进行初步了解。</p><p>2.每次池化后刚好缩小一半，通道数量不断增加，图像缩小比例与通道增加比例有关系，</p></li></ol><h3 id="result-and-discussion"><a href="#result-and-discussion" class="headerlink" title="result and discussion"></a>result and discussion</h3><ol><li>用多个3×3卷积核代替较大的卷积核，也顺便的简化  </li><li>这种方法比用较大的卷积核具有更大的非线性，明显减少了网络参数  </li></ol><h3 id="conclusion"><a href="#conclusion" class="headerlink" title="conclusion"></a>conclusion</h3><p>总体来看与abstract没什么区别，但是从后人角度来看3×3卷积核可以代替附近许多数字大小的卷积核</p><h2 id="ZFNet"><a href="#ZFNet" class="headerlink" title="ZFNet"></a>ZFNet</h2><p>本周主要对经典网络中的ZFNet进行了学习，主要是与可解释性问题相关，将深层的图片转化为肉眼可以识别的图片</p><p>论文名Visualizing and Understanding Convolutional Networks</p><p>油管上有作者的讲解视频，作为参考</p><h3 id="Abstract和introduction"><a href="#Abstract和introduction" class="headerlink" title="Abstract和introduction"></a>Abstract和introduction</h3><p>提出了当时对cnn的工作方式不太了解，不清楚为什么效果好或效果差，所谓“黑箱原理，他们提出了一种方法来解决这种问题”</p><h3 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h3><p>CNN以前可解释性比较差，对高层卷积很难看懂，这里提出了梯度上升（反池化）等方式将高层也转换成人眼可以看的懂的图片  </p><h3 id="Approach"><a href="#Approach" class="headerlink" title="Approach"></a>Approach</h3><p> 即为从前往后构造的过程，本质上与之前学习的AlexNet之类的区别不大，这里不做赘述，使用了switch记录最大值的位置，使能够完成反池化过程，转置卷积，</p><h3 id="Training-Details"><a href="#Training-Details" class="headerlink" title="Training Details"></a>Training Details</h3><p>图像预处理，使用水平翻转等方式，相当于增强数据，对卷积核大小进行了限制和裁剪</p><h3 id="Convnet-Visualization"><a href="#Convnet-Visualization" class="headerlink" title="Convnet Visualization"></a>Convnet Visualization</h3><p>不同层的数据演化效果不同，2层边缘颜色等低级特征，3层有纹理质地等，4层更加特化如狗脸，以此类推，变换对图的底层影响大，通过遮挡部分图进行图像局部相关性分析，  </p><h3 id="Experiments"><a href="#Experiments" class="headerlink" title="Experiments"></a>Experiments</h3><p>对AlexNet模型进行了实验，证明了去掉全连接层或中间两个卷积层对效果影响不大，但两个一起去掉影响大，这里差不多证明了全连接层用处不大，表明通过迁移学习可以用较小的数据量达到较好的效果，做到了对不同层提取的特征的有效性分析，特征分层，越深层效果越好</p><h3 id="Discussion"><a href="#Discussion" class="headerlink" title="Discussion"></a>Discussion</h3><p>  可以相对比较直观的解释分类的特征，也表明了可以用这种方法来改进模型  </p><h2 id="最终效果-1"><a href="#最终效果-1" class="headerlink" title="最终效果"></a>最终效果</h2><ol><li><p>基本初步了解了VGG</p></li><li><p>对其中的经典模型ZFNet进行了了解</p></li><li><p>对目前CNN的可解释性问题有了初步理解</p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> CNN学习经历 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>6月下半月</title>
       <link href="2020/12/16/6-yue-xia-ban-yue/"/>
       <url>2020/12/16/6-yue-xia-ban-yue/</url>
       
@@ -14,7 +33,7 @@
       
         <tags>
             
-            <tag> 6月下半月 </tag>
+            <tag> CNN学习经历 </tag>
             
         </tags>
       
