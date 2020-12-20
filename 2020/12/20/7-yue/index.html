@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="第一个博客, 大白爱好者">
+    <meta name="keywords" content="7月, 大白爱好者">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>第一个博客 | 大白爱好者</title>
+    <title>7月 | 大白爱好者</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -289,12 +289,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">第一个博客</h1>
+                    <h1 class="description center-align post-title">7月</h1>
                 </div>
             </div>
         </div>
@@ -410,8 +410,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/">
-                                <span class="chip bg-color">第一个博客</span>
+                            <a href="/tags/7%E6%9C%88/">
+                                <span class="chip bg-color">7月</span>
                             </a>
                         
                     </div>
@@ -426,7 +426,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-14
+                    2020-12-20
                 </div>
                 
 
@@ -447,7 +447,35 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="第一个博客"><a href="#第一个博客" class="headerlink" title="第一个博客"></a>第一个博客</h1><p>今天花了一天的时间终于解决了win上面许多奇怪的问题搭好了框架，总的来说非常高兴，第二天完成了友链之类的配置总的来说也很不错，之后再抽空完善其他部分。</p>
+                <h1 id="7月"><a href="#7月" class="headerlink" title="7月"></a>7月</h1><p>这半个月主要对·CNN的一些数理基础进行了推理和复习，虽然依旧有很多不能理解，但之后会继续学习。</p>
+<h2 id="一-数理内容"><a href="#一-数理内容" class="headerlink" title="一. 数理内容"></a>一. 数理内容</h2><p>对多层感知机和线性回归和逻辑回归，<em>卷积层和下采样层，</em>SoftMax回归</p>
+<h3 id="多层感知机"><a href="#多层感知机" class="headerlink" title="多层感知机"></a>多层感知机</h3><p>原始数据是非线性可分的，但是可以通过某种方法将其映射到一个线性可分的高维空间中，从而使用线性分类器完成分类</p>
+<h3 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h3><p>逻辑回归的世界中，结果变量与自变量的对数概率（log-odds）具有线性关系，输出数据点在一个或另一个类别中的概率，而不是常规数值</p>
+<h3 id="SoftMax回归"><a href="#SoftMax回归" class="headerlink" title="SoftMax回归"></a>SoftMax回归</h3><p>使用广义线性模型来拟合这个多项分布，由广义线性模型推导出的目标函数hθ(x)，hθ(x)即为SoftMax回归的分类模型。  </p>
+<h3 id="卷积层和下采样层"><a href="#卷积层和下采样层" class="headerlink" title="卷积层和下采样层"></a>卷积层和下采样层</h3><p>  <strong>局部感受野，</strong>每个隐层节点只连接到图像某个足够小局部的像素点上，从而大大减少需要训练的权值参数，<strong>权值共享，</strong>结构、功能是相同的，甚至是可以互相替代的。也就是，在卷积神经网中，同一个卷积核内，所有的神经元的权值是相同的，从而大大减少需要训练的参数，<strong>池化，</strong>也就是每次将原图像卷积后，都通过一个下采样的过程，来减小图像的规模  </p>
+<h1 id="一-代码内容"><a href="#一-代码内容" class="headerlink" title="一. 代码内容"></a>一. 代码内容</h1><p>这里对代码的实现参考了github和csdn的一些博文和库。</p>
+<h3 id="多层感知机（MLP）"><a href="#多层感知机（MLP）" class="headerlink" title="多层感知机（MLP）"></a>多层感知机（MLP）</h3><p> 主要是numpy、theano，以及python自带的os、sys、time模块，代码细节不过多赘述，这里值得注意的是，对SoftMax是MLP的基本构件之一，网络整体取决于这几个东西的架构，主要分为定义MLP模型和将MLP应用于MNIST  </p>
+<h3 id="逻辑回归-1"><a href="#逻辑回归-1" class="headerlink" title="逻辑回归"></a>逻辑回归</h3><p>先定义sigmoid函数，声音随机梯度上升算法或随机梯度下降算法，初始化权重，然后进行迭代优化，计算损失，更新权重值，然后随机删除选中下标，再次迭代</p>
+<h3 id="SoftMax回归-1"><a href="#SoftMax回归-1" class="headerlink" title="SoftMax回归"></a>SoftMax回归</h3><p>处理损失函数和导数，简化冗余参数，计算每个样本的类概率，计算损失函数，构造示性函数，计算导数</p>
+<h3 id="卷积层和下采样层-1"><a href="#卷积层和下采样层-1" class="headerlink" title="卷积层和下采样层"></a>卷积层和下采样层</h3><p>  具体依托与整个算法，在MLP中有过解释  </p>
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>1．      基本理解一些数理内容的数学知识，但是对涉及概率统计的知识有所模糊，可能是还未学习的缘故。</p>
+<p>2．      基本对代码内容有所了解，有利于以后调参</p>
+<p>3．      时间耗费较多，主要是对涉及的数学知识应用能力不足</p>
+<h1 id="7月下半月"><a href="#7月下半月" class="headerlink" title="7月下半月"></a>7月下半月</h1><p>这个月依旧对基础知识进行学习和复习，除去练车和复习一天约2-3小时，主要对TensorFlow框架的环境架构和安装进行了了解，尤其是环境配置颇费时间，过程的难点在于老是出错误，最终安装成功。</p>
+<p>ps：现在已经使用pytorch，显然更好上手和不容易出错。</p>
+<h1 id="一．安装"><a href="#一．安装" class="headerlink" title="一．安装"></a>一．安装</h1><p>安装期间有一些奇怪的问题，但基本上解决了，主要参考CSDN和谷歌学术的一些问题解决和搜索，其中要求本身具有anaconda和VS</p>
+<h3 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h3><p>由于以前会一些python，因此前期准备工作中anaconda有以及VS也具有，但是版本问题所以重新下载安装了一次</p>
+<h3 id="过程处理"><a href="#过程处理" class="headerlink" title="过程处理"></a>过程处理</h3><p>我安装的是CPU版本，难点在于在conda环境下安装和类似于储存权限，以及下载需要用到镜像，否则会超时，大概反复尝试了十几次才使用先下载再安装的方案成功，实际上在处理过程中发现pip版本不能太高，否则出问题。</p>
+<p>ps：pytorch已经安装GPU版本</p>
+<h1 id="二．基础学习"><a href="#二．基础学习" class="headerlink" title="二．基础学习"></a>二．基础学习</h1><p>包括环境调试和对tensorflow的程序结构和变量变位符的基础学习，这里包含代码较多，所花费时间较多。</p>
+<h3 id="程序结构"><a href="#程序结构" class="headerlink" title="程序结构"></a>程序结构</h3><p>程序分为两个独立的部分，构建任何拟创建神经网络的蓝图，包括计算图的定义及其执行，每个节点可以有零个或多个输入，但只有一个输出。网络中的节点表示对象（张量和运算操作），边表示运算操作之间流动的张量，添加变量和操作，并按照逐层建立神经网络的顺序传递它们</p>
+<h3 id="常量变量"><a href="#常量变量" class="headerlink" title="常量变量"></a>常量变量</h3><p>  常量是其值不能改变的张量变量又是分开存储的，它们可以存储在参数服务器上。占位符不包含任何数据，不需要初始化它们，所有常量、变量和占位符将在代码的计算图部分中定义，TensorFlow 支持的常见的数据类型  </p>
+<h2 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h2><ol>
+<li><p>对实际操作的一些软件进行了初步了解</p>
+</li>
+<li><p>充分理解了环境配置和实际操作出问题的困难性，以及对代码实际应用的难度有所认知，并了解了一些模型的应用方法</p>
+</li>
+</ol>
 
                 
             </div>
@@ -474,7 +502,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/12/14/di-yi-ge-bo-ke/">http://example.com/2020/12/14/di-yi-ge-bo-ke/</a>
+                    <a href="http://example.com/2020/12/20/7-yue/">http://example.com/2020/12/20/7-yue/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -512,8 +540,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2/">
-                                    <span class="chip bg-color">第一个博客</span>
+                                <a href="/tags/7%E6%9C%88/">
+                                    <span class="chip bg-color">7月</span>
                                 </a>
                             
                         </div>
@@ -603,17 +631,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/12/16/6-yue-xia-ban-yue/">
+                <a href="/2020/12/20/7-yue/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="6月下半月">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="7月">
                         
-                        <span class="card-title">6月下半月</span>
+                        <span class="card-title">7月</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -623,9 +652,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -634,11 +663,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CNN%E5%AD%A6%E4%B9%A0%E7%BB%8F%E5%8E%86/">
-                        <span class="chip bg-color">CNN学习经历</span>
+                    <a href="/tags/7%E6%9C%88/">
+                        <span class="chip bg-color">7月</span>
                     </a>
                     
                 </div>
@@ -652,13 +682,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/14/hello-world/">
+                <a href="/2020/12/17/5-yue/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="5月">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">5月</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -669,7 +699,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-17
                             </span>
                         <span class="publish-author">
                             
@@ -678,6 +708,14 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/5%E6%9C%88/">
+                        <span class="chip bg-color">5月</span>
+                    </a>
+                    
                 </div>
                 
             </div>
