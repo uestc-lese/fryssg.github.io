@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="7月, 大白爱好者">
+    <meta name="keywords" content="图网络总结, 大白爱好者">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>7月 | 大白爱好者</title>
+    <title>图网络总结 | 大白爱好者</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -294,7 +294,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">7月</h1>
+                    <h1 class="description center-align post-title">图网络总结</h1>
                 </div>
             </div>
         </div>
@@ -410,8 +410,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/7%E6%9C%88/">
-                                <span class="chip bg-color">7月</span>
+                            <a href="/tags/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
+                                <span class="chip bg-color">图神经网络</span>
                             </a>
                         
                     </div>
@@ -426,7 +426,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-20
+                    2021-01-25
                 </div>
                 
 
@@ -447,35 +447,95 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="7月"><a href="#7月" class="headerlink" title="7月"></a>7月</h1><p>这半个月主要对·CNN的一些数理基础进行了推理和复习，虽然依旧有很多不能理解，但之后会继续学习。</p>
-<h2 id="一-数理内容"><a href="#一-数理内容" class="headerlink" title="一. 数理内容"></a>一. 数理内容</h2><p>对多层感知机和线性回归和逻辑回归，<em>卷积层和下采样层，</em>SoftMax回归</p>
-<h3 id="多层感知机"><a href="#多层感知机" class="headerlink" title="多层感知机"></a>多层感知机</h3><p>原始数据是非线性可分的，但是可以通过某种方法将其映射到一个线性可分的高维空间中，从而使用线性分类器完成分类</p>
-<h3 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h3><p>逻辑回归的世界中，结果变量与自变量的对数概率（log-odds）具有线性关系，输出数据点在一个或另一个类别中的概率，而不是常规数值</p>
-<h3 id="SoftMax回归"><a href="#SoftMax回归" class="headerlink" title="SoftMax回归"></a>SoftMax回归</h3><p>使用广义线性模型来拟合这个多项分布，由广义线性模型推导出的目标函数hθ(x)，hθ(x)即为SoftMax回归的分类模型。  </p>
-<h3 id="卷积层和下采样层"><a href="#卷积层和下采样层" class="headerlink" title="卷积层和下采样层"></a>卷积层和下采样层</h3><p>  <strong>局部感受野，</strong>每个隐层节点只连接到图像某个足够小局部的像素点上，从而大大减少需要训练的权值参数，<strong>权值共享，</strong>结构、功能是相同的，甚至是可以互相替代的。也就是，在卷积神经网中，同一个卷积核内，所有的神经元的权值是相同的，从而大大减少需要训练的参数，<strong>池化，</strong>也就是每次将原图像卷积后，都通过一个下采样的过程，来减小图像的规模  </p>
-<h1 id="一-代码内容"><a href="#一-代码内容" class="headerlink" title="一. 代码内容"></a>一. 代码内容</h1><p>这里对代码的实现参考了github和csdn的一些博文和库。</p>
-<h3 id="多层感知机（MLP）"><a href="#多层感知机（MLP）" class="headerlink" title="多层感知机（MLP）"></a>多层感知机（MLP）</h3><p> 主要是numpy、theano，以及python自带的os、sys、time模块，代码细节不过多赘述，这里值得注意的是，对SoftMax是MLP的基本构件之一，网络整体取决于这几个东西的架构，主要分为定义MLP模型和将MLP应用于MNIST  </p>
-<h3 id="逻辑回归-1"><a href="#逻辑回归-1" class="headerlink" title="逻辑回归"></a>逻辑回归</h3><p>先定义sigmoid函数，声音随机梯度上升算法或随机梯度下降算法，初始化权重，然后进行迭代优化，计算损失，更新权重值，然后随机删除选中下标，再次迭代</p>
-<h3 id="SoftMax回归-1"><a href="#SoftMax回归-1" class="headerlink" title="SoftMax回归"></a>SoftMax回归</h3><p>处理损失函数和导数，简化冗余参数，计算每个样本的类概率，计算损失函数，构造示性函数，计算导数</p>
-<h3 id="卷积层和下采样层-1"><a href="#卷积层和下采样层-1" class="headerlink" title="卷积层和下采样层"></a>卷积层和下采样层</h3><p>  具体依托与整个算法，在MLP中有过解释  </p>
-<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p>1．      基本理解一些数理内容的数学知识，但是对涉及概率统计的知识有所模糊，可能是还未学习的缘故。</p>
-<p>2．      基本对代码内容有所了解，有利于以后调参</p>
-<p>3．      时间耗费较多，主要是对涉及的数学知识应用能力不足</p>
-<h1 id="7月下半月"><a href="#7月下半月" class="headerlink" title="7月下半月"></a>7月下半月</h1><p>这个月依旧对基础知识进行学习和复习，除去练车和复习一天约2-3小时，主要对TensorFlow框架的环境架构和安装进行了了解，尤其是环境配置颇费时间，过程的难点在于老是出错误，最终安装成功。</p>
-<p>ps：现在已经使用pytorch，显然更好上手和不容易出错。</p>
-<h1 id="一．安装"><a href="#一．安装" class="headerlink" title="一．安装"></a>一．安装</h1><p>安装期间有一些奇怪的问题，但基本上解决了，主要参考CSDN和谷歌学术的一些问题解决和搜索，其中要求本身具有anaconda和VS</p>
-<h3 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h3><p>由于以前会一些python，因此前期准备工作中anaconda有以及VS也具有，但是版本问题所以重新下载安装了一次</p>
-<h3 id="过程处理"><a href="#过程处理" class="headerlink" title="过程处理"></a>过程处理</h3><p>我安装的是CPU版本，难点在于在conda环境下安装和类似于储存权限，以及下载需要用到镜像，否则会超时，大概反复尝试了十几次才使用先下载再安装的方案成功，实际上在处理过程中发现pip版本不能太高，否则出问题。</p>
-<p>ps：pytorch已经安装GPU版本</p>
-<h1 id="二．基础学习"><a href="#二．基础学习" class="headerlink" title="二．基础学习"></a>二．基础学习</h1><p>包括环境调试和对tensorflow的程序结构和变量变位符的基础学习，这里包含代码较多，所花费时间较多。</p>
-<h3 id="程序结构"><a href="#程序结构" class="headerlink" title="程序结构"></a>程序结构</h3><p>程序分为两个独立的部分，构建任何拟创建神经网络的蓝图，包括计算图的定义及其执行，每个节点可以有零个或多个输入，但只有一个输出。网络中的节点表示对象（张量和运算操作），边表示运算操作之间流动的张量，添加变量和操作，并按照逐层建立神经网络的顺序传递它们</p>
-<h3 id="常量变量"><a href="#常量变量" class="headerlink" title="常量变量"></a>常量变量</h3><p>  常量是其值不能改变的张量变量又是分开存储的，它们可以存储在参数服务器上。占位符不包含任何数据，不需要初始化它们，所有常量、变量和占位符将在代码的计算图部分中定义，TensorFlow 支持的常见的数据类型  </p>
-<h2 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h2><ol>
-<li><p>对实际操作的一些软件进行了初步了解</p>
-</li>
-<li><p>充分理解了环境配置和实际操作出问题的困难性，以及对代码实际应用的难度有所认知，并了解了一些模型的应用方法</p>
-</li>
-</ol>
+                <h1 id="图网络总结"><a href="#图网络总结" class="headerlink" title="图网络总结"></a>图网络总结</h1><p>第一个问题什么是图神经网络，他的优势干什么的，他有哪些种类</p>
+<p>1.类似于离散数学中的图和点的关系，我们是通过分析点与线之间的关系，来对这个神经网络进行研究</p>
+<p>2.优点在于处理点与线的关系，找到关联性，或者进行推测，并且可以获得较为深度的意义</p>
+<p>3.主要分为GNN,GCN,Graph Embedding</p>
+<h3 id="预备知识的通俗解释"><a href="#预备知识的通俗解释" class="headerlink" title="预备知识的通俗解释"></a>预备知识的通俗解释</h3><p>图的定义 G=（V，E）V为节点，边为E，分为有向图和无向图，图与矩阵之间的联系和离散数学中一致</p>
+<p>傅里叶变换：将一个时域非周期的连续信号，转换为一个在频域非周期的连续信号，说白了就是时间与空间之间存在的一种关系</p>
+<p>图神经网络主要任务：节点层面，边层面，图层面</p>
+<p>这里我们认为图的每一个节点都有一组n维的特征值向量，可以想成一组信号</p>
+<p>拉普拉斯矩阵(L)，邻接矩阵(A)，度数矩阵(D)：L=D-A</p>
+<p>我们的训练目的：</p>
+<h3 id="GCN-Spectral"><a href="#GCN-Spectral" class="headerlink" title="GCN(Spectral)"></a>GCN(Spectral)</h3><p>主要操作：傅里叶变换在卷积然后再傅里叶逆变换</p>
+<p>这个是傅里叶系数公式：$f=\sum_{i=0}^{N-1} \hat{f}<em>{i} \cdot u</em>{i}$ 可以看成是一组n维的向量的线性组合，一个时间单位的时域信号，在 $x(t)=\int_{-\infty}^{\infty} x(\tau) \delta(t-\tau) d \tau$ 体现出了时间对总体积分影响</p>
+<img src="图网络总结.assets/image-20210128103120289.png" alt="image-20210128103120289" style="zoom: 50%;" />
+
+<p>这幅图片表明该图的每一个节点上有一个函数表述他的信号，或者说叫特征向量</p>
+<p>这是一个矩阵变换的内容：$L=U \Lambda U^{T}$ 其中 $\Lambda$ 是指特征值，线代内容，在这里我们认为 $\lambda$ 是frequency，而U则是basis</p>
+<p><img src="%E5%9B%BE%E7%BD%91%E7%BB%9C%E6%80%BB%E7%BB%93.assets/image-20210128104906396.png" alt="image-20210128104906396">                                                                  <img src="%E5%9B%BE%E7%BD%91%E7%BB%9C%E6%80%BB%E7%BB%93.assets/image-20210128105049937.png" alt="image-20210128105049937">       </p>
+<p>这里值得注意的的是 $\lambda$ 的值是frequency，然后当frequency有不同的的值对于u1，u2…也会有不同的值，以上图为例，在每一个不同的维度下，即 $\lambda$ =0，1，3…会得出不同的u矩阵，这是表示该frequency下不同的信号。可以预见的是当 $\lambda$ 越大相邻两点u的变化越大，可以理解为频率变化来类比。</p>
+<p>我们来将特征值反映进图中 $L f=(D-A) f=D f-A f$ </p>
+<p>推出以下公式含义：$f^{\mathrm{T}} L f$=$=\frac{1}{2} \sum_{v_{i} \in V} \sum_{v_{j} \in V} w_{i, j}\left(f\left(v_{i}\right)-f\left(v_{j}\right)\right)^{2}$ </p>
+<p>这个公式表示节点 i 和节点 j 之间的能量差异</p>
+<p>该公式用于估计不同频域成分的大小不同 $\hat{x}=U^{T} x$ （傅里叶变换）$x=U \hat{x}$ （这个是傅里叶逆变换）</p>
+<p>步骤：傅里叶变换-&gt;Filtering-&gt;傅里叶逆变换</p>
+<p>这里涉及到一个频率响应函数（应该这么叫）</p>
+<p>$\hat{y}=g_{\theta}(\Lambda) \quad U^{\mathrm{T}} \quad x$                 y = $\begin{array}{llllll}U&amp;\hat{y} &amp; = &amp;U&amp; g_{\theta}(\Lambda) &amp; U^{\mathrm{T}} &amp; x\end{array}$ </p>
+<p>化简为 y=$=g_{\theta}\left(U \Lambda U^{\mathrm{T}}\right) x$  —&gt;   $y=g_{\theta}(L) x$  </p>
+<p>解释一下：首先y是我们最终的期望输出，而我们要学习的参数是 $g_{\theta}(\Lambda)$ ，这里就涉及到一个问题，这个参数取决于我们模型图像的大小，不同的数据我们要设置 $g_{\theta}(\Lambda)$ 不同的大小</p>
+<p>然后我们对 $g_{\theta}(\Lambda)$ 做级数展开为N次方时，虽然能保证纵观全图，但是表明了这个模型不是localized</p>
+<h3 id="ChebNet"><a href="#ChebNet" class="headerlink" title="ChebNet"></a>ChebNet</h3><p>优点：快，并且可以localized，而且可以避免N维度对参数的影响</p>
+<p>重要公式 $\mathrm{g}<em>{\theta}(L)=\sum</em>{k=0}^{K} \theta_{k} L^{k}$ 通过选择K来确定想要看到K-localized，$\theta_{k}$ 而这个是要学的参数</p>
+<p>理论上的公式：$y=U \mathrm{~g}<em>{\theta}(\Lambda) U^{T} x=U\left(\sum</em>{k=0}^{K} \theta_{k} \Lambda^{k}\right) U^{T} x$ 但是时间复杂度会 $O\left(N^{2}\right)$ 不方便计算</p>
+<h5 id="Chebyshev-polynomial"><a href="#Chebyshev-polynomial" class="headerlink" title="Chebyshev polynomial"></a>Chebyshev polynomial</h5><p>$T_{0}(\widetilde{\Lambda})=\mathrm{I}, T_{1}(\widetilde{\Lambda})=\widetilde{\Lambda}, T_{k}(\widetilde{\Lambda})=2 \widetilde{\Lambda} T_{k-1}(\widetilde{\Lambda})-T_{k-2}(\widetilde{\Lambda})$<br>                         $\widetilde{\Lambda}=\frac{2 \Lambda}{\lambda_{\max }}-\mathrm{I}, \quad \tilde{\lambda} \in[-1,1]$</p>
+<p>通过这个变换我们要学的多项式变成了 $g_{\theta^{\prime}}(\widetilde{\Lambda})=\sum_{k=0}^{K} \theta_{k}^{\prime} T_{k}(\widetilde{\Lambda})$ </p>
+<p>为什么我们要用这个方法：可以理解为做这个变换主要是方便计算，让式子计算难度下降，有点点像多项式转变成多项式的平方和</p>
+<p>该式子推导如下</p>
+<p>$\begin{aligned} y=g_{\theta^{\prime}}(L) x &amp;=\sum_{k=0}^{K} \theta_{k}^{\prime} T_{k}(\tilde{L}) x \ &amp;=\theta_{0}^{\prime} T_{0}(\tilde{L}) x+\theta_{1}^{\prime} T_{1}(\tilde{L}) x+\theta_{2}^{\prime} T_{2}(\tilde{L}) x+\cdots+\theta_{K}^{\prime} T_{K}(\tilde{L}) x \ &amp;=\theta_{0}^{\prime} \bar{x}<em>{0}+\theta</em>{1}^{\prime} \bar{x}<em>{1}+\theta</em>{2}^{\prime} \bar{x}<em>{2}+\cdots+\theta</em>{K}^{\prime} \bar{x}<em>{K} \ &amp;=\left[\begin{array}{llll}\bar{x}</em>{0} &amp; \bar{x}<em>{1} &amp; \ldots &amp; \bar{x}</em>{K}\end{array}\right]\left[\begin{array}{lll}\theta_{0}^{\prime} &amp; \theta_{1}^{\prime} &amp; \ldots &amp; \theta_{K}^{\prime}\end{array}\right] \end{aligned}$</p>
+<p>在这种情况下他的计算难度只有$O(K E)$</p>
+<h3 id="GCN"><a href="#GCN" class="headerlink" title="GCN"></a>GCN</h3><p> 推导过程略：</p>
+<p>renormalization trick: $I_{N}+D^{-\frac{1}{2}} A D^{-\frac{1}{2}} \rightarrow \tilde{D}^{-\frac{1}{2}} \tilde{A} \tilde{D}^{-\frac{1}{2}}$<br>$$<br>H^{(l+1)}=\sigma\left(\tilde{D}^{-\frac{1}{2}} \tilde{A} \tilde{D}^{-\frac{1}{2}} H^{(l)} W^{(l)}\right)<br>$$<br>可以写成核心公式：$h_{v}=f\left(\frac{1}{|\mathcal{N}(v)|} \sum_{u \in \mathcal{N}(v)} W x_{u}+b\right)$  </p>
+<p> $\sum_{u \in \mathcal{N}(v)}$ 表示所有的相关节点加起来，包括自己， $W$ 表示傅里叶变换， $|\mathcal{N}(v)|$ 表示取平均，</p>
+<h3 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h3><h5 id="Filter-in-GraphSAGE"><a href="#Filter-in-GraphSAGE" class="headerlink" title="Filter in GraphSAGE"></a>Filter in GraphSAGE</h5><p>对于每个点 $v_{i},$ 其生成新feature的过程如下：先从 $\mathcal{N}\left(v_{i}\right)$ 中选出 $S$ 个点 (记相应集合为 $\left.\mathcal{N}<em>{\mathcal{S}}\left(v</em>{i}\right)\right),$ 再把这 $S$ 个点的所有feature (用某种AGG函数) 合起来, 再将其与 $v_{i}$ 的feature $F_{i}$ 组合, 乘以某个矩阵后再经过一个激活函数得到 $v_{i}$ 的新feature。</p>
+<h5 id="Filter-in-GAT"><a href="#Filter-in-GAT" class="headerlink" title="Filter in GAT"></a>Filter in GAT</h5><p>GAT-Filter具体操作中对于点 $v_{i}, \quad \mathcal{N}\left(v_{i}\right) \cup v_{i}$ 中点 $v_{j}$ 对 $v_{i}$ 的importance score为 $v_{i}, \quad \mathcal{N}\left(v_{i}\right) \cup v_{i}$ 中点 $v_{j}$ 对 $v_{i}$ 的importance score为 $e_{i, j}:=\alpha\left(F_{i} \theta, F_{j} \theta\right):=\operatorname{LeakyReLU}\left(a^{T}\left[F_{i} \theta, F_{j} \theta\right]\right),$ 其中 $[\cdot, \cdot]$ 其中 $[\cdot, \cdot]$ 为连接操作, $\quad \alpha$<br>为一共同attention function, $\theta$ 为某参数化矩阵, $a$ 为某参数化向量 (要理解 $e_{i, j}$ 的定义需 要从形式上看: 这里只涉及两个点, 所以定义里面只有两个feature, 通过某种 $\theta$ 作用后再连接 起来, 再用 $a^{T}$ 乘以后转换信息, 最后经过 LeakyReLU (为了使不同点生成的score不同我 们不能用 $\operatorname{Re} L U$ )生成大小 $) ，$ 我们接下来将其用 Softmax 函数规范化得到 $\alpha_{i, j} ，$ 那么很显然地, $v_{i}$ 新生成的feature就是$F_{i}^{\prime}=\sum_{v_{j} \in \mathcal{N}\left(v_{i}\right) \cup v_{i}} \alpha_{i, j} F_{j} \theta($ 这里面可以增加激活函数）了。以上具体操作中仅仅训练出了一个 $\theta$ ，可能导致训练效果不太稳定。我们可以将上述操作重复 $M$ 次得到 $\theta^{1} \sim \theta^{M},$ 最后取 $F_{i}^{\prime}=|<em>{m=1}^{M} \sum</em>{v_{j} \in \mathcal{N}\left(v_{i}\right) \cup v_{i}} \alpha_{i, j}^{m} F_{j} \theta^{m},$ 其中 $|$ 代表连接。</p>
+<h5 id="Filter-in-MPNN"><a href="#Filter-in-MPNN" class="headerlink" title="Filter in MPNN"></a>Filter in MPNN</h5><p>首先来看下消息函数, 可以以 GG-NN 中使用的消息函数开始, GG-NN 用的是矩阵乘法：<br>$$<br>M\left(h_{v}, h_{w}, e_{v w}\right)=A_{e_{v w}} h_{w}<br>$$<br>为了兼容边特征，作者提出了新的消息函数：<br>$$<br>M\left(h_{v}, h_{w}, e_{v w}\right)=A\left(e_{v w}\right) h_{w}<br>$$<br>其中, $A\left(e_{v w}\right)$ 是将边的向量 $e_{v w}$ 映射到 $d \times d$ 维矩阵的神经网络。<br>矩阵乘法有一个特点, 从节点 w 到节点 $v$ 的函数仅与隐藏层状态 $h_{w}$ 和边向量 $e_{v w}$ 有关，而和隐藏状态 $h_{v}^{t}$ 无关。理论上来说, 如果节 点消息同时依赖于源节点 $\mathrm{w}$ 和目标节点 $\vee$ 的话, 网络的消息通道将会得到更有效的利用。所以也可以尝试去使用一种消息函数的变种：<br>$$<br>m_{v w}=f\left(h_{w}^{t}, h_{v}^{t}, e_{v w}\right)<br>$$<br>其中，f为神经网络。</p>
+<h3 id="Graph-Pooling-Operation"><a href="#Graph-Pooling-Operation" class="headerlink" title="Graph Pooling Operation"></a>Graph Pooling Operation</h3><p>池化分为哪几种：Hard rule hard rule很简单，因为Graph structure是已知的，可以预先规定池化节点，Graph coarsening图粗略化是先对节点进行聚类，然后合成一个超级节点，以达到池化效果，Node selection节点选择就是选择一些重要节点去代替原图，类似于分析节点的重要性，方法类似节点分类的操作。</p>
+<h5 id="gPool"><a href="#gPool" class="headerlink" title="gPool"></a>gPool</h5><p>选择一些重要节点去代替原图，类似于分析节点的重要，计算证明过程略</p>
+<h5 id="DiffPool"><a href="#DiffPool" class="headerlink" title="DiffPool"></a>DiffPool</h5><p>先对节点进行聚类，然后合成一个超级节点，计算证明过程略</p>
+<h5 id="Eigenpooling"><a href="#Eigenpooling" class="headerlink" title="Eigenpooling"></a>Eigenpooling</h5><p>解决了面对层次化聚类过程中，如何将合并成一个超级节点的子图的结构信息保留下来的问题，相当于是对DiffPool的改进版，EigenPool算法分为两部分，1）图坍缩，将图分为一组子图，并通过将子图视为超节点来形成粗化图； 2）使用EigenPooling将原始图信号转换为在粗化图上定义的信号。</p>
+<h3 id="GNN的鲁棒性"><a href="#GNN的鲁棒性" class="headerlink" title="GNN的鲁棒性"></a>GNN的鲁棒性</h3><h5 id="攻击种类"><a href="#攻击种类" class="headerlink" title="攻击种类"></a>攻击种类</h5><p>攻击已经训练好的GNN，攻击可重训练的GNN。这两种攻击可定义为：基于投影梯度下降（PGD）的拓扑攻击和min-max拓扑攻击。可以粗略理解为攻击点，攻击线，和非直观攻击。</p>
+<p>GradArgmax ：修改了点，线和边缘，在每一个步骤中选取干扰最大的扰动</p>
+<p>Nettack：干扰网络本身，但是需要知道模型参数才能攻击</p>
+<p>GF-Attack ：破坏模型输出的图嵌入向量的质量，从而降低利用图嵌入进行的下游任务的性能</p>
+<p>ReWatt ：通过改变线的分布，改变度数，该方法以较小的改变去干扰结果</p>
+<h5 id="防御方法"><a href="#防御方法" class="headerlink" title="防御方法"></a>防御方法</h5><p>对抗训练：通过输入对抗数据，和一般的对抗训练意义相同</p>
+<p>清洗图像：通过预处理，清洗掉错误的数据，例如边或点，Pro-GNN</p>
+<p>注意机制：减少对边缘的权值，边缘的降低影响，RGCN，对被攻击的节点降低关注度，PA-GNN,我们要使用clean graphs来学习</p>
+<h3 id="图网络的自监督学习"><a href="#图网络的自监督学习" class="headerlink" title="图网络的自监督学习"></a>图网络的自监督学习</h3><h5 id="SSL（半监督学习）"><a href="#SSL（半监督学习）" class="headerlink" title="SSL（半监督学习）"></a>SSL（半监督学习）</h5><p>基本概念不做赘述，这里遮住或者生成高斯噪声，在特征层面干扰，通过增加或者减少点，线，子样本，和扩充矩阵，来对结构层面干扰，通过强制判别器来输出类别标签。在一个数据集上训练一个生成器 G 以及一个判别器 D，输入是N类当中的一个。在训练的时候，D被用于预测输入是属于 N+1的哪一个，这个+1是对应了G的输出。这种方法可以用于创造更加有效的分类器，并且可以比普通的GAN 产生更加高质量的样本。</p>
+<p>这种训练方式可以改进大多数的GNN模型：<img src="图网络总结.assets/image-20210128213805812.png" alt="image-20210128213805812" style="zoom:80%;" /></p>
+<p>对节点分类任务的优点：该任务是去更正错误标签</p>
+<img src="图网络总结.assets/image-20210128231404556.png" alt="image-20210128231404556" style="zoom:80%;" />
+
+<p>1.使用相邻的标签也能提高准确率</p>
+<p>2.标签矫正确实能帮助任务</p>
+<p>3.样本较小也没有关系</p>
+<h3 id="FastGCN"><a href="#FastGCN" class="headerlink" title="FastGCN"></a>FastGCN</h3><p>作者假设图是无限大的, 即当前的图只是无限大图的一个子图，因此对于一个无限大图来说 就可以写成积分的形式:<br>$$<br>\tilde{h}^{(l+1)}(v)=\int \hat{A}(v, u) h^{(l)}(u) W^{(l)} d P(u), h^{(l+1)}=\sigma\left(\tilde{h}^{(l+1)}(v)\right)<br>$$<br>其中 $P(u)$ 是节点的概率分布，这里作者假设了每个节点是一个 iid 样本(独立同分布)，其实 并不会真正去求这个积分，表达成积分的形式主要是为了用蒙特卡罗法((Monte Carlo)。</p>
+<p>利用蒙特卡罗法，对每一层采样 $t_{l}$ 个顶点 $u_{1}^{(l)}, u_{2}^{(l)}, \cdots, u_{t_{l}}^{(l)} \sim P$ 来近似积分:<br>$$<br>\tilde{h}^{(l+1)}(v)=\frac{1}{t_{l}} \sum_{j=1}^{t_{l}} \hat{A}\left(v, u_{j}^{(l)}\right) h^{(l)}\left(u_{j}^{(l)}\right) W^{(l)}, h^{(l+1)}=\sigma\left(\tilde{h}^{(l+1)}(v)\right)<br>$$<br>同时为了减小估计方差(VARIANCE REDUCTION)，作者提出利用重要性采样，每个顶点根据以 下概率分布进行采样: $q(u)=\frac{|\hat{A}(:, u)|^{2}}{\sum_{u^{\prime} \in V}\left|\hat{A}\left(:, u^{\prime}\right)\right|^{2}}$ </p>
+<p>通俗来说其实 FastGCN 就是在每一层根据顶点的度采样t_个顶点。 FastGCN 采用的是一种 layer-wise 的采样方式, 即对每一层 layer 进行采样，FastGCN 就不会有邻域指数扩散的问题，不过也存在一种可能,对于一个很大且十分稀疏的图来说， FastGCN 很可能刚好采样到一批跟需要嵌入节点没有任何关联(即没有连接)的节点或者连 接很稀疏，此时对于当前这批 mini-batch 就无法进行信息传播聚合，网络便无法学习。</p>
+<h3 id="GraphSAGE"><a href="#GraphSAGE" class="headerlink" title="GraphSAGE"></a>GraphSAGE</h3><p>其运行流程如上图所示，可以分为三个步骤对图中每个顶点邻居顶点进行采样，根据聚合函数聚合邻居顶点蕴含的信息，得到图中各顶点的向量表示供下游任务使用</p>
+<p>1.采样邻居顶点</p>
+<p>出于对计算效率的考虑，对每个顶点采样一定数量的邻居顶点作为待聚合信息的顶点。设采样数量为k，若顶点邻居数少于k,则采用有放回的抽样方法，直到采样出k个顶点。若顶点邻居数大于k，则采用无放回的抽样。</p>
+<p>2.聚合函数的选取</p>
+<p>我们希望选出来的函数对称<br>$$<br>h_{v}^{k} \leftarrow \sigma\left(\boldsymbol{W} \cdot \operatorname{MEAN}\left(\left{h_{v}^{k-1}\right} \cup\left{h_{u}^{k-1}, \forall u \in N(v)\right}\right)\right.<br>$$<br> mean aggregator将目标页点和邻居顶点的第k-1层向量拼接起来, 然后对向量的每个维度进行求均值的操作, 将得到的结果做一次非线性变换产生目标页点的第k层表示向量。<br>$$<br>A G G R E G A T E^{p o o l} k=\max \left(\left{\sigma\left(\boldsymbol{W} \operatorname{poolh}<em>{u</em>{i}}^{k}+b\right), \forall u_{i} \in N(v)\right}\right)<br>$$<br>Pooling aggregator 先对目标页点的邻接点表示向量进行一次非线性变换, 之后进行一次 pooling操作(maxpooling or meanpooling), 将得到结果与目标顶点的表示向量拼接, 最后再经 过一次非线性变换得到目标顶点的第k层表示向量。<br>LSTM相比简单的求平均操作具有更强的表达能力，然而由于LSTM函数不是关于输入对称的，所以在使用时需要对顶点的邻居进行一次乱序操作。</p>
+<p>对于结果的节点分类依旧缺乏明确的分析证明过程</p>
+<h4 id="GraphSAINT，RS-GCN，PinSAGE分析过程略"><a href="#GraphSAINT，RS-GCN，PinSAGE分析过程略" class="headerlink" title="GraphSAINT，RS-GCN，PinSAGE分析过程略"></a>GraphSAINT，RS-GCN，PinSAGE分析过程略</h4><h3 id="Tasks-Dataset-and-Benchmark"><a href="#Tasks-Dataset-and-Benchmark" class="headerlink" title="Tasks, Dataset, and Benchmark"></a>Tasks, Dataset, and Benchmark</h3><h5 id="SuperPixel-MNIST-and-CIFAR10"><a href="#SuperPixel-MNIST-and-CIFAR10" class="headerlink" title="SuperPixel MNIST and CIFAR10"></a>SuperPixel MNIST and CIFAR10</h5><img src="图网络总结.assets/image-20210128210652527.png" alt="image-20210128210652527" style="zoom:80%;" />
+
+<p>这个dataset是用作图像识别的功能</p>
+<h5 id="ZINC-molecule-graphs-dataset"><a href="#ZINC-molecule-graphs-dataset" class="headerlink" title="ZINC molecule graphs dataset"></a>ZINC molecule graphs dataset</h5><img src="图网络总结.assets/image-20210128211012992.png" alt="image-20210128211012992" style="zoom:80%;" />
+
+<p>现实世界中的分子结构，来训练预测分子的溶解性</p>
+<h5 id="Node-classification-Stochastic-Block-Model-dataset"><a href="#Node-classification-Stochastic-Block-Model-dataset" class="headerlink" title="Node classification : Stochastic Block Model dataset"></a>Node classification : Stochastic Block Model dataset</h5><img src="图网络总结.assets/image-20210128211241906.png" alt="image-20210128211241906" style="zoom:80%;" />
+
+<p>这个训练集是找图中想太多子图，和判断节点是否是等价节点</p>
+<h5 id="Edge-classification-Traveling-Salesman-Problem"><a href="#Edge-classification-Traveling-Salesman-Problem" class="headerlink" title="Edge classification: Traveling Salesman Problem"></a>Edge classification: Traveling Salesman Problem</h5><img src="图网络总结.assets/image-20210128211514538.png" alt="image-20210128211514538" style="zoom:80%;" />
+
+<p>这个训练集是类似于哥尼斯堡七桥问题能不能一次把路线走完</p>
+<h4 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h4><p><img src="图网络总结.assets/image-20210128213334762.png" alt="image-20210128213334762" style="zoom:50%;" /><img src="图网络总结.assets/image-20210128213452589.png" alt="image-20210128213452589" style="zoom:50%;" /></p>
+<p><img src="图网络总结.assets/image-20210128213519975.png" alt="image-20210128213519975" style="zoom:50%;" /><img src="图网络总结.assets/image-20210128213544001.png" alt="image-20210128213544001" style="zoom: 40%;" /></p>
+<p>可以看出GCN的直接应用表现都本太好但是当提高一些改进方案后准确率会提升很多。</p>
+<h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><h5 id="医疗方面"><a href="#医疗方面" class="headerlink" title="医疗方面"></a>医疗方面</h5><p>分子图生成，发现药物，药物相互作用与药物不良反应分析，药物推荐</p>
+<h5 id="自然语言处理方面"><a href="#自然语言处理方面" class="headerlink" title="自然语言处理方面"></a>自然语言处理方面</h5><p>问题生成</p>
 
                 
             </div>
@@ -502,7 +562,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/12/20/7-yue/">http://example.com/2020/12/20/7-yue/</a>
+                    <a href="http://example.com/2021/01/25/tu-wang-luo-zong-jie/">http://example.com/2021/01/25/tu-wang-luo-zong-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -540,8 +600,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/7%E6%9C%88/">
-                                    <span class="chip bg-color">7月</span>
+                                <a href="/tags/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
+                                    <span class="chip bg-color">图神经网络</span>
                                 </a>
                             
                         </div>
@@ -631,9 +691,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/01/25/tu-wang-luo-zong-jie/">
                     <div class="card-image">
@@ -651,9 +712,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -662,6 +723,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -680,13 +742,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/17/5-yue/">
+                <a href="/2020/12/20/7-yue/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="5月">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="7月">
                         
-                        <span class="card-title">5月</span>
+                        <span class="card-title">7月</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -697,7 +759,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-20
                             </span>
                         <span class="publish-author">
                             
@@ -710,8 +772,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/5%E6%9C%88/">
-                        <span class="chip bg-color">5月</span>
+                    <a href="/tags/7%E6%9C%88/">
+                        <span class="chip bg-color">7月</span>
                     </a>
                     
                 </div>
